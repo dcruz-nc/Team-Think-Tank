@@ -2,3 +2,5 @@ config
 fileContentIndex
 .wsuo
 .vs
+venv
+__pychache__
