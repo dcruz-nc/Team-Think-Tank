@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\assets",
-    "\\DesSprintDay 3"
+    "\\DesSprintDay 3",
+    "\\templates"
   ],
-  "SelectedNode": "\\venv",
+  "SelectedNode": "\\app.py",
   "PreviewInSolutionExplorer": false
 }
