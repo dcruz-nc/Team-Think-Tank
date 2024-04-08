@@ -1,41 +1,53 @@
-/*Mobile CSS*/
-@media screen and (max-width: 767px) {
-    header {
-        height: 100vh;
-        background: linear-gradient(to top, #d6d5f6, #bde4f9);
-    }
+/*X-small devices*/
+header {
+    height: 100vh;
+    background: linear-gradient(to top, #d6d5f6, #bde4f9);
+}
 
-        header h1 {
-            font-size: 70px;
-        }
-
-        header img {
-            border-radius: 20px;
-        }
-
-    #headerContainer {
-        margin: 0 auto;
-    }
-
-    section {
-        height: 100vh;
-    }
-
-    .features img {
+    header img {
         border-radius: 20px;
     }
 
-    .faq {
-        background: linear-gradient(to top, #bde4f9, #d6d5f6);
+
+#headerContainer {
+    margin: 0 auto;
+}
+
+section {
+    height: 100vh;
+}
+
+.features img {
+    border-radius: 20px;
+}
+
+.faq {
+    background: linear-gradient(to top, #bde4f9, #d6d5f6);
+}
+
+/*Small devices*/
+@media (min-width: 576px) {
+    header h1 {
+        font-size: 70px;
     }
 }
 
-/*Tablet CSS*/
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+/*Medium devices*/
+@media (min-width: 768px) {
 
 }
 
-/*Desktop CSS*/
-@media screen and (min-width: 1024px) {
+/*Large Devices*/
+@media (min-width: 992px) {
+
+}
+
+/*X-large devices*/
+@media (min-width: 1200px) {
+
+}
+
+/*XX-large devices*/
+@media (min-width: 1400px) {
 
 }
