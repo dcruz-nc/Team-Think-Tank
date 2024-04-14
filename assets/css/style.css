@@ -1,11 +1,16 @@
 /*X-small devices*/
 header {
-    height: 100vh;
+    max-height: 100vh;
     background: linear-gradient(to top, #d6d5f6, #bde4f9);
 }
 
     header img {
         border-radius: 20px;
+    }
+
+    header h1 {
+        font-size: 45px;
+        
     }
 
 
@@ -14,7 +19,7 @@ header {
 }
 
 section {
-    height: 100vh;
+    max-height: 100vh;
 }
 
 .features img {
@@ -23,6 +28,10 @@ section {
 
 .faq {
     background: linear-gradient(to top, #bde4f9, #d6d5f6);
+}
+
+.hidden, .hidden h1, .hidden p, .hidden button, .hidden img {
+    height: 0;
 }
 
 /*Small devices*/
