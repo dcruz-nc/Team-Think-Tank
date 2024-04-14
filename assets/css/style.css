@@ -31,12 +31,18 @@ section {
 }
 
 .hidden, .hidden h1, .hidden p, .hidden button, .hidden img {
-    height: 0;
+    display: none;
 }
 
 /*Small devices*/
 @media (min-width: 576px) {
+    .nonHidden, .nonHidden h1, .nonHidden p, .nonHidden button, .nonHidden img, .nonHidden div {
+        display: none;
+    }
 
+    .hidden, .hidden h1, .hidden p, .hidden button, .hidden img {
+
+    }
 }
 
 /*Medium devices*/
