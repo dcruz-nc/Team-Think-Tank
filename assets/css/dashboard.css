@@ -1,5 +1,11 @@
 /*X-small devices*/
+.img-fluid {
+    border-radius: 10px;
+}
 
+.card {
+    padding: 0px;
+}
 
 /*Small devices*/
 @media (min-width: 576px) {
