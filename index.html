@@ -9,7 +9,7 @@
     <header class="d-flex align-items-center pb-5">
         <div class="container" id="headerContainer">
             <div>
-                <h1 class="text-center text-white pb-5"><strong>TeamThinkTank.</strong></h1>
+                <h1 class="text-center text-white py-5"><strong>TeamThinkTank.</strong></h1>
             </div>
             <div class="text-center pb-5">
                 <img class="img-fluid" src="./assets/images/placeholder.png" />
@@ -22,7 +22,7 @@
                 </p>
             </div>
             <div class="text-center">
-                <button class="btn btn-dark">Learn More</button>
+                <a class="btn btn-dark" href="#faq" role="button">Learn More</a>
             </div>
         </div>
     </header>
@@ -30,40 +30,40 @@
         <section class="features">
             <div class="container pt-5 pb-5">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6 text-center pb-3">
+                    <div class="col-xs-12 col-md-6 text-center pb-3">
                         <img class="img-fluid" src="./assets/images/placeholder.png" />
                     </div>
                     <div class="col">
                         <h1>Online Collaboration</h1>
                         <p>Swift access to other groups or individual collaborators</p>
-                        <button class="btn btn-dark mb-3">Read More</button>
+                        <a class="btn btn-dark" href="./about.html" role="button">Read More</a>
                     </div>
                 </div>
-                <div class="row d-none d-sm-flex">
-                    <div class="col col-sm-6 hidden">
+                <div class="row d-none d-md-flex">
+                    <div class="col col-md-6 hidden">
                         <h1>Note Taking</h1>
                         <p>Worldwide access to organized notes from students</p>
-                        <button class="btn btn-dark">Read More</button>
+                        <a class="btn btn-dark" href="./about.html" role="button">Read More</a>
                     </div>
-                    <div class="col col-sm-6 hidden">
+                    <div class="col col-md-6 hidden">
                         <img class="img-fluid" src="./assets/images/placeholder.png" />
                     </div>
                 </div>
-                <div class="row nonHidden d-sm-none">
+                <div class="row nonHidden d-md-none">
                     <div class="col-xs-12 text-center pb-3 nonHidden">
                         <img class="img-fluid" src="./assets/images/placeholder.png" />
                     </div>
-                    <div class="col col-sm-6 nonHidden">
+                    <div class="col col-md-6 nonHidden">
                         <h1>Note Taking</h1>
                         <p>Worldwide access to organized notes from students</p>
-                        <button class="btn btn-dark">Read More</button>
+                        <a class="btn btn-dark" href="./about.html" role="button">Read More</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="faq text-center">
-            <h1 class="pt-5 pb-5">FAQ</h1>
+        <section class="faq" id="faq">
+            <h1 class="pt-5 pb-5 text-center">FAQ</h1>
             <div class="accordion mx-3 pb-5" id="accordionFAQ">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
@@ -102,11 +102,13 @@
                     </div>
                 </div>
             </div>
-            <h1 class="pb-3">Sign up today.</h1>
-            <button class="btn btn-dark mb-5">Get Started</button>
-            <footer class="bg-dark text-white p-4 row">
-                <span class="col-xs-12">TeamThinkTank. 2024</span>
-                <span>Contact Us</span>
+            <div class="text-center">
+                <h1 class="pb-3">Sign up today.</h1>
+                <button class="btn btn-dark mb-5">Get Started</button>
+            </div>
+            <footer class="bg-dark text-center text-white p-4 row d-flex flex-xs-column flex-sm-row justify-content-between">
+                <span>TeamThinkTank. 2024</span>
+                <a class="text-decoration-none text-white" href="#contact.html"><span>Contact Us</span></a>
             </footer>
         </section>
     </main>
