@@ -1,6 +1,6 @@
 /*X-small devices*/
 header {
-    max-height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(to top, #d6d5f6, #bde4f9);
 }
 
