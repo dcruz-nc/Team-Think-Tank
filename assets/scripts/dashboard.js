@@ -1,6 +1,6 @@
 let uploadModal = new bootstrap.Modal(document.getElementById('uploadModal'), {});
 
-var notes = JSON.parse(localStorage.getItem("notes") || []);
+var notes = JSON.parse(localStorage.getItem("notes")) || [];
 function uploadNotes(event) {
     event.preventDefault();
     console.log("clicked login button");

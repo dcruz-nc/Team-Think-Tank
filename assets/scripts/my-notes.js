@@ -1,10 +1,10 @@
 var notes = JSON.parse(localStorage.getItem("notes"));
 
-notes.forEach((note) => {
-    addNote(note);
+notes.forEach((note, index) => {
+    addNote(note, index);
 });
 
-function addNote(note) {
+function addNote(note, index) {
     var title = note.title;
     var description = note.description;
 
@@ -12,6 +12,7 @@ function addNote(note) {
     noteContainer.classList.add('col-12');
     noteContainer.classList.add('col-md-4');
     noteContainer.classList.add('position-relative');
+    noteContainer.classList.add('note');
 
     const noteImage = document.createElement('img');
     noteImage.classList.add('img-fluid');
@@ -19,6 +20,7 @@ function addNote(note) {
     noteContainer.append(noteImage);
 
     const noteTitle = document.createElement('h2');
+    noteTitle.classList.add('note-title');
     noteTitle.textContent = title;
     noteContainer.append(noteTitle);
 
@@ -32,6 +34,13 @@ function addNote(note) {
     const noteDescription = document.createElement('p');
     noteDescription.textContent = description;
     noteContainer.append(noteDescription);
+    noteDeleteBtn.addEventListener('click', function () {
+        notes.splice(index, 1);
+
+        localStorage.setItem('notes', JSON.stringify(notes));
+
+        noteContainer.remove();
+    });
 
     document.querySelector('.notes').append(noteContainer);
 }
