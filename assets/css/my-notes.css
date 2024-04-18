@@ -1,0 +1,25 @@
+/*X-small devices*/
+
+.note-Delete-Btn {
+    top: 0;
+}
+
+/*Small devices*/
+@media (min-width: 576px) {
+}
+
+/*Medium devices*/
+@media (min-width: 768px) {
+}
+
+/*Large Devices*/
+@media (min-width: 992px) {
+}
+
+/*X-large devices*/
+@media (min-width: 1200px) {
+}
+
+/*XX-large devices*/
+@media (min-width: 1400px) {
+}

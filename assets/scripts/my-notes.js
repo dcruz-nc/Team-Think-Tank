@@ -1,44 +1,37 @@
-let uploadModal = new bootstrap.Modal(document.getElementById('uploadModal'), {});
+var notes = JSON.parse(localStorage.getItem("notes"));
 
-var notes = JSON.parse(localStorage.getItem("notes") || "[]");
-function uploadNotes(event) {
-    event.preventDefault();
-    console.log("clicked login button");
+notes.forEach((note) => {
+    addNote(note);
+});
 
-    const title = document.querySelector('#inputTitle').value.trim();
-    const description = document.querySelector('#inputDescription').value.trim();
+function addNote(note) {
+    var title = note.title;
+    var description = note.description;
 
-    if (title && description) {
-        var obj = {
-            title: `${title}`,
-            description: `${description}`
-        };
+    const noteContainer = document.createElement('div');
+    noteContainer.classList.add('col-12');
+    noteContainer.classList.add('col-md-4');
+    noteContainer.classList.add('position-relative');
 
-        notes.push(obj);
+    const noteImage = document.createElement('img');
+    noteImage.classList.add('img-fluid');
+    noteImage.src = './assets/images/placeholder.png';
+    noteContainer.append(noteImage);
 
-        const noteContainer = document.createElement('div');
-        noteContainer.classList.add('col-12');
-        noteContainer.classList.add('col-md-4');
+    const noteTitle = document.createElement('h2');
+    noteTitle.textContent = title;
+    noteContainer.append(noteTitle);
 
-        const noteImage = document.createElement('img');
-        noteImage.classList.add('img-fluid');
-        noteImage.src = './assets/images/placeholder.png';
-        noteContainer.append(noteImage);
+    const noteDeleteBtn = document.createElement('button');
+    noteDeleteBtn.textContent = '[x]';
+    noteDeleteBtn.classList.add('note-Delete-Btn');
+    noteDeleteBtn.classList.add('position-absolute');
+    noteDeleteBtn.classList.add('end-0');
+    noteContainer.append(noteDeleteBtn);
 
-        const noteTitle = document.createElement('h2');
-        noteTitle.textContent = `${title}`;
-        noteContainer.append(noteTitle);
+    const noteDescription = document.createElement('p');
+    noteDescription.textContent = description;
+    noteContainer.append(noteDescription);
 
-        const noteDescription = document.createElement('p');
-        noteDescription.textContent = `${description}`;
-        noteContainer.append(noteDescription);
-
-        document.querySelector(".myNotes").append(noteContainer);
-
-        localStorage.setItem("notes", JSON.stringify(notes));
-    }
-
-    uploadModal.hide();
+    document.querySelector('.notes').append(noteContainer);
 }
-
-document.querySelector('#uploadButton').addEventListener('click', uploadNotes);

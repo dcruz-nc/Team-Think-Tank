@@ -2,10 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\assets",
-    "\\assets\\css",
-    "\\assets\\images",
+    "\\assets\\json",
     "\\assets\\scripts"
   ],
-  "SelectedNode": "\\dashboard.html",
+  "SelectedNode": "\\public-notes.html",
   "PreviewInSolutionExplorer": false
 }
