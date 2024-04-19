@@ -1,3 +1,5 @@
+let reportModal = new bootstrap.Modal(document.getElementById('reportModal'), {});
+
 var notes = JSON.parse(localStorage.getItem("notes"));
 
 notes.forEach((note, index) => {
@@ -24,24 +26,20 @@ function addNote(note, index) {
     noteTitle.textContent = title;
     noteContainer.append(noteTitle);
 
-    const noteDeleteBtn = document.createElement('i');
-    noteDeleteBtn.classList.add('note-Delete-Btn');
-    noteDeleteBtn.classList.add('position-absolute');
-    noteDeleteBtn.classList.add('end-0');
-    noteDeleteBtn.classList.add('fa-solid');
-    noteDeleteBtn.classList.add('fa-x');
-    noteDeleteBtn.setAttribute('role', 'button');
-    noteContainer.append(noteDeleteBtn);
+    const noteFlagBtn = document.createElement('i');
+    noteFlagBtn.classList.add('note-Flag-Btn');
+    noteFlagBtn.classList.add('position-absolute');
+    noteFlagBtn.classList.add('end-0');
+    noteFlagBtn.classList.add('fa-solid');
+    noteFlagBtn.classList.add('fa-flag');
+    noteFlagBtn.setAttribute('role', 'button');
+    noteContainer.append(noteFlagBtn);
 
     const noteDescription = document.createElement('p');
     noteDescription.textContent = description;
     noteContainer.append(noteDescription);
-    noteDeleteBtn.addEventListener('click', function () {
-        notes.splice(index, 1);
-
-        localStorage.setItem('notes', JSON.stringify(notes));
-
-        noteContainer.remove();
+    noteFlagBtn.addEventListener('click', function () {
+        reportModal.show();
     });
 
     document.querySelector('.notes').append(noteContainer);
