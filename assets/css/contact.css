@@ -1,0 +1,76 @@
+/*X-small devices*/
+.img-fluid {
+    border-radius: 10px;
+}
+
+.card {
+    padding: 0px;
+}
+
+body {
+    background-color: #F5FCFF;
+}
+
+
+footer {
+    margin-top: auto;
+}
+
+/* form */
+
+.form-container {
+    margin-top: 120px;
+    margin-bottom: 120px; 
+    padding-bottom: 50px;
+    padding-top: 50px;
+    border-radius: 15px;
+}
+
+.form-control:focus {
+    outline: none !important;
+}
+
+.custom-btn {
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+
+.custom-btn:hover {
+    background-color: rgb(26, 26, 26) !important; 
+}
+
+
+.bg-image {
+    background-size: cover;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+/*Small devices*/
+@media (min-width: 576px) {
+
+}
+
+/*Medium devices*/
+@media (min-width: 768px) {
+
+}
+
+/*Large Devices*/
+@media (min-width: 992px) {
+
+}
+
+/*X-large devices*/
+@media (min-width: 1200px) {
+
+}
+
+/*XX-large devices*/
+@media (min-width: 1400px) {
+
+}
