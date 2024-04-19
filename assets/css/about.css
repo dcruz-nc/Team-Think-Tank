@@ -1,0 +1,43 @@
+/*X-small devices*/
+.img-fluid {
+    border-radius: 10px;
+}
+
+.card {
+    padding: 0px;
+}
+
+body {
+    background-color: #F5FCFF !important;
+}
+
+
+footer {
+    margin-top: auto;
+}
+
+
+/*Small devices*/
+@media (min-width: 576px) {
+
+}
+
+/*Medium devices*/
+@media (min-width: 768px) {
+
+}
+
+/*Large Devices*/
+@media (min-width: 992px) {
+
+}
+
+/*X-large devices*/
+@media (min-width: 1200px) {
+
+}
+
+/*XX-large devices*/
+@media (min-width: 1400px) {
+
+}
