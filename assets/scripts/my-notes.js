@@ -24,11 +24,13 @@ function addNote(note, index) {
     noteTitle.textContent = title;
     noteContainer.append(noteTitle);
 
-    const noteDeleteBtn = document.createElement('button');
-    noteDeleteBtn.textContent = '[x]';
+    const noteDeleteBtn = document.createElement('i');
     noteDeleteBtn.classList.add('note-Delete-Btn');
     noteDeleteBtn.classList.add('position-absolute');
     noteDeleteBtn.classList.add('end-0');
+    noteDeleteBtn.classList.add('fa-solid');
+    noteDeleteBtn.classList.add('fa-x');
+    noteDeleteBtn.setAttribute('role', 'button');
     noteContainer.append(noteDeleteBtn);
 
     const noteDescription = document.createElement('p');
