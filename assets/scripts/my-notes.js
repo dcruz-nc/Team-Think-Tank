@@ -7,6 +7,7 @@ notes.forEach((note, index) => {
 function addNote(note, index) {
     var title = note.title;
     var description = note.description;
+    var image = note.image;
 
     const noteContainer = document.createElement('div');
     noteContainer.classList.add('col-12');
@@ -14,13 +15,24 @@ function addNote(note, index) {
     noteContainer.classList.add('position-relative');
     noteContainer.classList.add('note');
 
+    const imageContainer = document.createElement('div');
+    imageContainer.classList.add('border');
+    imageContainer.classList.add('border-dark');
+    imageContainer.classList.add('rounded');
+    imageContainer.classList.add('p-2');
+    imageContainer.classList.add('image-container');
+    noteContainer.append(imageContainer);
+
     const noteImage = document.createElement('img');
     noteImage.classList.add('img-fluid');
-    noteImage.src = './assets/images/placeholder.png';
-    noteContainer.append(noteImage);
+    noteImage.classList.add('mb-3');
+    noteImage.classList.add('object-fit-cover');
+    noteImage.src = image;
+    imageContainer.append(noteImage);
 
-    const noteTitle = document.createElement('h2');
+    const noteTitle = document.createElement('h5');
     noteTitle.classList.add('note-title');
+    noteTitle.classList.add('mb-0');
     noteTitle.textContent = title;
     noteContainer.append(noteTitle);
 
@@ -34,6 +46,7 @@ function addNote(note, index) {
     noteContainer.append(noteDeleteBtn);
 
     const noteDescription = document.createElement('p');
+    noteDescription.classList.add('mb-0');
     noteDescription.textContent = description;
     noteContainer.append(noteDescription);
     noteDeleteBtn.addEventListener('click', function () {
