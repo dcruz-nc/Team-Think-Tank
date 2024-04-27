@@ -7,15 +7,24 @@ function uploadNotes(event) {
 
     const title = document.querySelector('#inputTitle').value.trim();
     const description = document.querySelector('#inputDescription').value.trim();
-    const image = document.querySelector('#inputFile');
+    const image = document.getElementById('inputFile').files[0];
+    var reader = new FileReader();
+    var imageData;
+    reader.onloadend = function () {
+        imageData = reader.result;
+    }
 
-    if (title && description && image.files && image.files[0]) {
-        const url = URL.createObjectURL(image.files[0]);
+    if (image) {
+        reader.readAsDataURL(image);
+    }
 
+    /*imgData = getBase64Image(image);*/
+
+    if (title && description && image) {
         var obj = {
             title: `${title}`,
             description: `${description}`,
-            image: `${url}`
+            image: `${imageData}`
         };
 
         notes.push(obj);
@@ -26,15 +35,17 @@ function uploadNotes(event) {
     uploadModal.hide();
 }
 
+//function getBase64Image(img) {
+//    var canvas = document.createElement("canvas");
+//    canvas.width = img.width;
+//    canvas.height = img.height;
+
+//    var ctx = canvas.getContext("2d");
+//    ctx.drawImage(img, 0, 0);
+
+//    var dataURL = canvas.toDataURL("image/png");
+
+//    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+//}
+
 document.querySelector('#uploadButton').addEventListener('click', uploadNotes);
-
-//document.querySelector('input[type="file"]').addEventListener('change', function () {
-//    if (this.files && this.files[0]) {
-//        var img = document.querySelector('img');
-//        img.onload = () => {
-//            URL.revokeObjectURL(img.src);  // no longer needed, free memory
-//        }
-
-//        img.src = URL.createObjectURL(this.files[0]); // set src to blob url
-//    }
-//});
