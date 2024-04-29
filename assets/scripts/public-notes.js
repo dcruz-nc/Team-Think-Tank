@@ -31,7 +31,7 @@ function addNote(note, index) {
     imageContainer.append(noteImage);
 
     const noteTitle = document.createElement('h5');
-    noteTitle.classList.add('note-title');
+    noteTitle.classList.add('noteTitle');
     noteTitle.classList.add('mb-0');
     noteTitle.textContent = title;
     noteContainer.append(noteTitle);
@@ -47,11 +47,33 @@ function addNote(note, index) {
 
     const noteDescription = document.createElement('p');
     noteDescription.classList.add('mb-0');
+    noteDescription.classList.add('noteDescription');
     noteDescription.textContent = description;
     noteContainer.append(noteDescription);
+
     noteFlagBtn.addEventListener('click', function () {
         reportModal.show();
     });
 
     document.querySelector('.notes').append(noteContainer);
+}
+
+function searchNotes() {
+    let input = document.getElementById('searchBar').value
+    input = input.toLowerCase();
+    let x = document.getElementsByClassName('noteTitle');
+    let y = document.getElementsByClassName('noteDescription')
+    let note = document.getElementsByClassName('note');
+
+    for (i = 0; i < x.length; i++) {
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            note[i].style.display = "none";
+        } else if (!y[i].innerHTML.toLowerCase().includes(input)) {
+            note[i].style.display = "list-item";
+            note[i].style.listStyleType = "none";
+        } else {
+            note[i].style.display = "list-item";
+            note[i].style.listStyleType = "none";
+        }
+    }
 }
