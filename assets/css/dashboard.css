@@ -7,9 +7,10 @@
     padding: 0px;
 }
 
-.col-12.col-md-4 a {
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit color from parent */
+/* remove css from bootstrap for link*/
+.col-12.col-md-4 a { 
+    text-decoration: none; 
+    color: inherit;
 }
 
 /*Small devices*/
