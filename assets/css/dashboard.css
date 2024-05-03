@@ -7,6 +7,12 @@
     padding: 0px;
 }
 
+/* remove css from bootstrap for link*/
+.col-12.col-md-4 a { 
+    text-decoration: none; 
+    color: inherit;
+}
+
 /*Small devices*/
 @media (min-width: 576px) {
 
@@ -31,3 +37,4 @@
 @media (min-width: 1400px) {
 
 }
+
