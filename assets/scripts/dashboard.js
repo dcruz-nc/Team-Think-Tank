@@ -35,6 +35,7 @@ function uploadNotes(event) {
     uploadModal.hide();
 }
 
+
 //function getBase64Image(img) {
 //    var canvas = document.createElement("canvas");
 //    canvas.width = img.width;
@@ -49,3 +50,4 @@ function uploadNotes(event) {
 //}
 
 document.querySelector('#uploadButton').addEventListener('click', uploadNotes);
+
