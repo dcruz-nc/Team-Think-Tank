@@ -7,6 +7,11 @@
     padding: 0px;
 }
 
+.col-12.col-md-4 a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+}
+
 /*Small devices*/
 @media (min-width: 576px) {
 
@@ -31,3 +36,4 @@
 @media (min-width: 1400px) {
 
 }
+
