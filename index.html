@@ -104,8 +104,38 @@
             </div>
             <div class="text-center">
                 <h1 class="pb-3">Sign up today.</h1>
-                <a href="profile.html" class="btn btn-dark mb-5">Get Started</a>
-            </div>            
+
+                <button type="button" class="btn btn-dark mb-5" data-bs-toggle="modal" data-bs-target="#signInModal">
+                    Get Started
+                </button>
+            </div>
+            
+            <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="password">
+                                </div>
+                                <a href="dashboard.html" class="btn btn-primary">Sign In</a>
+
+                            </form>
+                            <p class="mt-2">Don't have an account? <a href="#">Register</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                      
             <footer class="bg-dark text-center text-white p-4 row d-flex flex-xs-column flex-sm-row justify-content-between">
                 <span>TeamThinkTank. 2024</span>
                 <a class="text-decoration-none text-white" href="#contact.html"><span>Contact Us</span></a>

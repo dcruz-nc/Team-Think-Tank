@@ -23,3 +23,4 @@ function uploadNotes(event) {
 }
 
 document.querySelector('#uploadButton').addEventListener('click', uploadNotes);
+
