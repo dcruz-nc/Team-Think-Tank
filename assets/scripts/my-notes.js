@@ -68,16 +68,24 @@ function searchNotes() {
     let x = document.getElementsByClassName('noteTitle');
     let y = document.getElementsByClassName('noteDescription')
     let note = document.getElementsByClassName('note');
+    let footer = document.querySelector('.footer');
 
     for (i = 0; i < x.length; i++) {
         if (!x[i].innerHTML.toLowerCase().includes(input)) {
             note[i].style.display = "none";
+            footer.style.position = "absolute";
+            footer.style.bottom = "0";
+            footer.style.width = "100%";
         } else if (!y[i].innerHTML.toLowerCase().includes(input)) {
             note[i].style.display = "list-item";
             note[i].style.listStyleType = "none";
+            footer.style.position = "absolute";
+            footer.style.bottom = "0";
+            footer.style.width = "100%";
         } else {
             note[i].style.display = "list-item";
             note[i].style.listStyleType = "none";
+            footer.style.position = "relative";
         }
     }
 }

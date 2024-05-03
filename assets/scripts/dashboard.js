@@ -1,26 +1,17 @@
 let uploadModal = new bootstrap.Modal(document.getElementById('uploadModal'), {});
 
 var notes = JSON.parse(localStorage.getItem("notes")) || [];
+var imageData;
 
-function uploadNotes(event) {
+async function uploadNotes(event) {
     event.preventDefault();
 
     const title = document.querySelector('#inputTitle').value.trim();
     const description = document.querySelector('#inputDescription').value.trim();
     const image = document.getElementById('inputFile').files[0];
-    var reader = new FileReader();
-    var imageData;
-    reader.onloadend = function () {
-        imageData = reader.result;
-    }
+    var imageData = await getImageData(image);
 
-    if (image) {
-        reader.readAsDataURL(image);
-    }
-
-    /*imgData = getBase64Image(image);*/
-
-    if (title && description && image) {
+    if (title && description && imageData) {
         var obj = {
             title: `${title}`,
             description: `${description}`,
@@ -35,17 +26,17 @@ function uploadNotes(event) {
     uploadModal.hide();
 }
 
-//function getBase64Image(img) {
-//    var canvas = document.createElement("canvas");
-//    canvas.width = img.width;
-//    canvas.height = img.height;
+function getImageData(image) {
+    var reader = new FileReader();
+    reader.onloadend = function () {
+        imageData = reader.result;
+    }
 
-//    var ctx = canvas.getContext("2d");
-//    ctx.drawImage(img, 0, 0);
+    if (image) {
+        reader.readAsDataURL(image);
+    }
 
-//    var dataURL = canvas.toDataURL("image/png");
-
-//    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-//}
+    return imageData;
+}
 
 document.querySelector('#uploadButton').addEventListener('click', uploadNotes);
