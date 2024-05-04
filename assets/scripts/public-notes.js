@@ -22,6 +22,7 @@ function addNote(note, index) {
     imageContainer.classList.add('border-dark');
     imageContainer.classList.add('rounded');
     imageContainer.classList.add('p-2');
+    imageContainer.classList.add('image-container');
     noteContainer.append(imageContainer);
 
     const noteImage = document.createElement('img');
